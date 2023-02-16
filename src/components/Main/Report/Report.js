@@ -1,8 +1,8 @@
 import profil from "./image.png"
 
+export default function Report({currentTimeFrame, setCurrentTimeFrame}){
+    
 
-
-export default function Report(){
     return(
 
         <div>
@@ -15,9 +15,9 @@ export default function Report(){
             </div>
 
             <div className="bg-deep w-[255px] h-[175px] text-gri rounded-3xl p-5 flex flex-col gap-3 pt-14 -mt-9">
-                <p>Daily</p>
-                <p>Weekly</p>
-                <p>Monthly</p>
+                <p onClick={() => {setCurrentTimeFrame(currentTimeFrame = 0)}}>Daily</p>
+                <p onClick={() => {setCurrentTimeFrame(currentTimeFrame = 1)}}>Weekly</p>
+                <p onClick={() => {setCurrentTimeFrame(currentTimeFrame = 2)}}>Monthly</p>
             </div>
         </div>
     )
